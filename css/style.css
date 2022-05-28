@@ -5,13 +5,13 @@
 }
 @font-face {
 font-family: "OpenSans-r";
-src: url(https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Regular.woff);
+src: url(../fonts/OpenSans-Regular.ttf);
 font-weight: 400;
 font-style: normal;
 }
 @font-face {
 font-family: "OpenSans-b";
-src: url(https://netology-code.github.io/html-2-diploma/sources/fonts/OpenSans-Bold.woff);
+src: url(../fonts/OpenSans-Bold.ttf);
 font-weight: 700;
 font-style: normal;
 }
@@ -32,7 +32,7 @@ body {
   padding: 28px 248px 124px;
   width: 100%;
  min-width: 1240px;
-  background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/banner-bg.jpg);
+  background-image: url(../images/banner-bg.jpg);
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
@@ -149,16 +149,18 @@ margin-left: 31.5px;
   margin-top: 30px;
   display: flex;
   flex-wrap: wrap;
+  flex-direction: row;
+  text-align: center;
+  justify-content: space-between;
  }
 
-.top {
-  text-align: center;
-  margin-top: 60px;
-  font-family: "OpenSans-b", Arial, sans-serif;
-  text-transform: uppercase;
-  font-size: 12.5px;
-  line-hight: normal;
-  
+.trend-title {
+ width: 100%;
+ text-align: center;
+ font-family: "OpenSans-b", Arial, sans-serif;
+ text-transform: uppercase;
+ font-size: 12.5px;
+ line-hight: normal;
 }
 
 .top::after{
@@ -173,22 +175,42 @@ margin-left: 31.5px;
   background:#b59f5b;
 }
 
-.trend{
-  width: 24%;
-  margin-right: 3px;
-}
 .trend {
-    box-sizing: border-box;
-    display: block;
-    height: 320px;
-   background-color: #00ffff;
-  position: relative;
-  z-index:0;
-  }
- 
+  width: 24.7%;
+  margin-top: 1.9em;
 }
 
-/**/.trend::after {
+.trend {
+  box-sizing: border-box;
+  display: block;
+  
+ }
+
+.trend1 {
+ background-image: url(../images/trend1.jpg);
+ background-repeat: no-repeat;
+ background-size: cover;
+ }
+
+.trend2 {
+ background-image: url(../images/trend2.jpg);
+ background-repeat: no-repeat;
+ background-size: cover;
+ }
+
+.trend3 {
+ background-image: url(../images/trend3.jpg);
+ background-repeat: no-repeat;
+ background-size: cover;
+ }
+
+.trend4 {
+ background-image: url(../images/trend4.jpg);
+ background-repeat: no-repeat;
+ background-size: cover;
+ }
+
+/**/.page::after {
   content: "";
   position: absolute;
   top: 0;
@@ -197,7 +219,7 @@ margin-left: 31.5px;
   left:0;
   background-color: #000000;
   opacity: 0.6;
-  z-index:-1;
+  z-index:0;
 }
 
 .trend-teg {
@@ -209,27 +231,71 @@ margin-left: 31.5px;
 
 .trend-teg-link {
   text-decoration: none;
-    font-family: "OpenSans-b", Arial, sans-serif;
-    text-transform: uppercase;
-    color: #b59f5b;
-    font-size: 14px;
-  
+  font-family: "OpenSans-b", Arial, sans-serif;
+  text-transform: uppercase;
+  color: #b59f5b;
+  font-size: 14px;
 }
+
 .trend-name {
   font-family: "OpenSans-b", Arial, sans-serif;
-    text-transform: uppercase;
-    font-size: 18px;
-    line-height: 1.2;
+  text-transform: uppercase;
+  font-size: 18px;
+  line-height: 1.2;
 }
+
 .trend-teg-item {
   margin-right: 20px;
 }
+
+.page {
+ height: 20em; 
+ display: flex;
+ flex-wrap: wrap; 
+ align-items: flex-end;
+ /*padding-top: 7em;*/
+ padding-bottom: 1.2em;
+ position: relative;
+   z-index:0;
+  }
+
 .trend-text {
-  width: 90%;
-    border: 3px solid #b59f5b;
-    padding: 36px 32px;
-    align-items: flex-end;
+ border: 3px solid #b59f5b;   
+ margin: 0 auto;
+ width: 90%;
+ padding: 36px 34px;
+ position: relative;
+    z-index:1;
+ }
+
+.trend-link {
+  text-decoration: none; 
+  font-family: "OpenSans-b", Arial, sans-serif;
+  text-transform: uppercase;
+  color: #ffffff;
+  font-size: 16px;
+ }
+
+@media (max-width: 640px) and (orientation: portrait) {
+  .trends {
+   display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+    justify-content: space-between;
+  }
+  
+.trend {
+  width: 100%;
+  }
 }
+  
+  @media (max-width: 640px) and (orientation: landscape) {
+    .trend {
+  width: 49.7%;
+ }
+}
+  
+
 /*=================main========================*/
 
 .content {
@@ -454,7 +520,7 @@ display: block;
   border: none; 
   height: 47px; 
   width: 47px;
-  background-image: url(https://netology-code.github.io/html-2-diploma/sources/images/search.svg);
+  background-image: url(../svg/search.svg);
   background-repeat: no-repeat;
   background-size: 16px;
   background-position: center;
@@ -573,6 +639,174 @@ font-family: "OpenSans-b", Arial, sans-serif;
 color: #b59f5b;
 font-family: "OpenSans-b", Arial, sans-serif;
 }
+
+/*==================================product========================*/
+
+.products {
+ max-width: 1200px;
+ margin: 0 auto;
+ margin-top: 30px;
+ padding: 0 15px;
+ justify-content: space-between;
+ display: flex;
+ flex-wrap: wrap;
+ text-align: center;
+}
+/*space-around space-evenly space-between*/
+.product-title {
+ padding-right: 60px;
+ width: 100%;
+ text-align: center;
+ font-family: "OpenSans-b", Arial, sans-serif;
+ text-transform: uppercase;
+ font-size: 12.5px;
+ line-hight: normal;
+}
+
+.top::after{
+  content:"";
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 14px;
+  width: 66px;
+  height: 3px;
+  background:#b59f5b;
+}
+
+.product {
+  padding-top: 30px;
+  box-sizing: border-box;
+  width: 25%;
+  /*margin-right: 90px;*/
+}
+
+.product-content {
+  width: 100%;
+  margin: 0 auto;
+  
+}
+ .product_text {
+  min-height: 250px; 
+  padding: 20px;
+  margin-top: -33px;
+  outline: 3px solid #b59f5b;
+  outline-offset: 10px;
+}
+
+.product__name {
+ padding-top: 30px;
+ list-style: none;
+ text-align: start; 
+ font-family: "OpenSans-b", Arial, sans-serif;
+ text-transform: uppercase;
+ font-size: 18px;
+ line-height: 1.2;
+ 
+}
+
+p {
+  list-style: none;
+  text-transform: none;
+}
+
+.product__description {
+ text-align: start; /*center*/
+ font-family: "OpenSans-b", Arial, sans-serif;
+ font-size: 12.5px;
+ line-hight: normal;
+}
+
+.product-link {
+  list-style: none;
+  text-decoration: none;
+  font-family: "OpenSans-r", Arial, sans-serif;
+  text-transform: none;
+  color: #b59f5b;
+  font-size: 14.5px;
+}
+
+.product__imgbox {
+  display: block;
+}
+
+.product__preview {
+  max-width: 100%;
+  margin-right: auto;
+  margin-left: auto;
+  display: block;
+}
+
+.product__footer {
+  justify-content: space-between;
+}
+
+.product__footer {
+  padding-top: 25px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-end;
+}
+
+.product__price_old {
+    text-decoration: line-through;
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.product__price {
+    font-size: 12.5px;
+    font-family: "OpenSans-b", Arial, sans-serif;
+    color: #222;
+    line-height: 1.2;
+    display: flex;
+}
+
+.product__button {
+  font-size: 13px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-position: center;
+  background-color: #b59f5b;
+  font-family: "OpenSans-b", Arial, sans-serif;
+  border: none;
+  width: 140px;
+  height: 50px;
+}
+
+@media (max-width: 640px) {     /*пока не получается*/
+  .products {
+ width: 100%;
+ display: flex;
+ flex-wrap: wrap;
+ flex-direction: column
+}
+  
+  .product-title {
+ /*padding-right: 60px;text-align: start; */
+ width: 31%;
+ display: inline-block;
+    vertical-align: middle;  
+ font-family: "OpenSans-b", Arial, sans-serif;
+ text-transform: uppercase;
+ font-size: 12.5px;
+ line-hight: normal;
+}
+
+.top::after{
+  content:"";
+  display: block;
+  position: relative;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 14px;
+  width: 66px;
+  height: 3px;
+  background:#b59f5b;
+}
+}
+
 
 /*=====скрыть======*/
  .hidden{
